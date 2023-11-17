@@ -22,7 +22,7 @@ $sql = mysqli_query($conn, $query);
     <div class="container contentt">
             <nav><a class="none" href="index.php"><h3 class="mt-3"><img src="img/notepad2.png">NotepadKu</h3></a></nav>
     
-    <div class="card shadow bg-body-tertiary rounded mb-3 navigasi">
+    <div class="card shadow bg-body-tertiary rounded mb-3 navigasi" style="border: 3px solid aquamarine;">
         <div class="card-body">
             <form action="insert.php" method="post" >
             <input class="form-control me-2" name="title_note" placeholder="Title">
@@ -40,12 +40,12 @@ $sql = mysqli_query($conn, $query);
     while($result = mysqli_fetch_assoc($sql)) {
       
     ?>
-    <div class="card mb-2 samping" style="width: 18rem;">
+    <div class="card mb-2 samping" style="width: fit-content; border: solid 3px aquamarine;">
         <div class="card-body">
           <h5 class="card-title"><?php echo $result['title_note'];?></h5>
           <p class="card-text"><?php echo $result['note_note'];?></p>
-          <a href="#" class="card-link">Edit</a>
-          <a href="#" class="card-link">Delete</a>
+          <a href="#" class="card-link" style="text-decoration: none; color: blue;">Edit</a>
+          <a href="#" class="card-link" style="text-decoration: none; color: blue;">Delete</a>
         </div>
       </div>
       <?php

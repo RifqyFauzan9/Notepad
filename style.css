@@ -21,20 +21,6 @@
         color: rgba(255, 255, 255, 0.84);
     }
 
-    .card.mb-2.samping {
+    .card {
         display: inline-block;
-    }
-
-    
-
-    @media (min-width: 768px) {
-        .card.shadow.bg-body-tertiary.rounded.mb-3.navigasi {
-            max-width: 90%;
-        }
-    }
-
-    @media (max-width: 576px) {
-        .card.shadow.bg-body-tertiary.rounded.mb-3.navigasi {
-            max-width: 50%;
-        }
     }
