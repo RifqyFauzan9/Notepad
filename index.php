@@ -22,7 +22,7 @@ $no = 0;
   <body style="background: url(img/leaves.webp);">
     <div class="container contentt">
             <nav><a class="none" href="index.php"><h3 class="mt-3"><img src="img/notepad2.png">NotepadKu</h3></a></nav>
-  <div class="footer" style="background: none; color: black; display:flex; justify-content:left; margin-top: -2rem;">Copyright © 2023 by Rifqy Fauzan</div>
+  <div class="footer" style="background: salmon; color: white; display:flex; justify-content:left; margin-top: -2rem; max-width:fit-content; border-radius:1rem;">Copyright © 2023 by Rifqy Fauzan</div>
     
     <div class="card shadow bg-body-tertiary rounded mb-3 navigasi" style="border: 3px solid aquamarine;">
         <div class="card-body">
