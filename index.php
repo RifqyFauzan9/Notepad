@@ -1,7 +1,8 @@
 <?php 
 include"config.php";
-$query = "SELECT * FROM `tb_note`";
+$query = "SELECT * FROM `tb_notee`";
 $sql = mysqli_query($conn, $query);
+$no = 0;
 
 // var_dump($result);
 // die();
@@ -40,19 +41,19 @@ $sql = mysqli_query($conn, $query);
     while($result = mysqli_fetch_assoc($sql)) {
       
     ?>
-    <div class="card mb-2 samping" style="width: fit-content; border: solid 3px aquamarine;">
+    <div class="card mb-2" style="width: fit-content; border: solid 3px aquamarine; display: inline-block;">
         <div class="card-body">
-          <h5 class="card-title"><?php echo $result['title_note'];?></h5>
+          <h5 class="card-title"><?php echo ++$no?>.<?php echo $result['title_note'];?></h5>
           <p class="card-text"><?php echo $result['note_note'];?></p>
           <a href="#" class="card-link" style="text-decoration: none; color: blue;">Edit</a>
-          <a href="#" class="card-link" style="text-decoration: none; color: blue;">Delete</a>
+          <a href="delete.php?delete=<?php echo $result['id_note'];?>" class="card-link" style="text-decoration: none; color: blue;">Delete</a>
         </div>
       </div>
       <?php
     }
         ?>
     </div>
-    <footer class="footer">Copyright © 2023 by Rifqy Fauzan</footer>
+    <footer class="footer" style="display: flex; justify-content: center; align-items:end; background-color: black; padding: 10px; color: rgba(255, 255, 255, 0.84);">Copyright © 2023 by Rifqy Fauzan</footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
