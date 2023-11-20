@@ -1,5 +1,5 @@
 <?php 
-include"config.php";
+include "config.php";
 $query = "SELECT * FROM `tb_notee`";
 $sql = mysqli_query($conn, $query);
 $no = 0;
@@ -22,6 +22,7 @@ $no = 0;
   <body style="background: url(img/leaves.webp);">
     <div class="container contentt">
             <nav><a class="none" href="index.php"><h3 class="mt-3"><img src="img/notepad2.png">NotepadKu</h3></a></nav>
+  <div class="footer" style="background: none; color: black; display:flex; justify-content:left; margin-top: -2rem;">Copyright © 2023 by Rifqy Fauzan</div>
     
     <div class="card shadow bg-body-tertiary rounded mb-3 navigasi" style="border: 3px solid aquamarine;">
         <div class="card-body">
@@ -41,11 +42,11 @@ $no = 0;
     while($result = mysqli_fetch_assoc($sql)) {
       
     ?>
-    <div class="card mb-2" style="width: fit-content; border: solid 3px aquamarine; display: inline-block;">
+    <div class="card mb-2" style="max-width: fit-content; border: solid 3px aquamarine; display: inline-block;">
         <div class="card-body">
-          <h5 class="card-title"><?php echo ++$no?>.<?php echo $result['title_note'];?></h5>
+          <h5 class="card-title"><?php echo ++$no?>. <?php echo $result['title_note'];?></h5>
           <p class="card-text"><?php echo $result['note_note'];?></p>
-          <a href="#" class="card-link" style="text-decoration: none; color: blue;">Edit</a>
+          <a href="update.php?edit=<?php echo $result['id_note'];?>" class="card-link" style="text-decoration: none; color: blue;">Edit</a>
           <a href="delete.php?delete=<?php echo $result['id_note'];?>" class="card-link" style="text-decoration: none; color: blue;">Delete</a>
         </div>
       </div>
@@ -53,7 +54,6 @@ $no = 0;
     }
         ?>
     </div>
-    <footer class="footer" style="display: flex; justify-content: center; align-items:end; background-color: black; padding: 10px; color: rgba(255, 255, 255, 0.84);">Copyright © 2023 by Rifqy Fauzan</footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
