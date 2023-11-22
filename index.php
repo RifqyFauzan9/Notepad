@@ -39,8 +39,6 @@ $no = 0;
     .footer {
       background: blue; 
       color: white; 
-      display:flex; 
-      justify-content:left; 
       margin-top: -1rem; 
       margin-bottom:1rem; 
       max-width:fit-content; 
