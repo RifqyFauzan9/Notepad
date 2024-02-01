@@ -9,4 +9,3 @@ if ($sql) {
 } else {
     echo $query;
 }
-?>

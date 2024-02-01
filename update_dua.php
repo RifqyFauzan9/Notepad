@@ -6,9 +6,8 @@ $query = "UPDATE tb_notee SET title_note = '$title', note_note = '$note' WHERE t
 include "config.php";
 $sql = mysqli_query($conn, $query);
 
-if($sql) {
+if ($sql) {
     header("location:index.php");
-}else{
+} else {
     echo $query;
 }
-?>

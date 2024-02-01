@@ -7,7 +7,6 @@ $delete = "DELETE FROM tb_notee WHERE id_note = '$id'";
 $sql = mysqli_query($conn, $query);
 if ($sql) {
     header("location:index.php");
-}else {
+} else {
     echo $query;
 }
-?>

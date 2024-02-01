@@ -1,9 +1,9 @@
 <?php
-$host="localhost";
-$user="root";
-$pass="";
-$db="notepad";
-$conn=mysqli_connect($host,$user,$pass,$db);
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "notepad";
+$conn = mysqli_connect($host, $user, $pass, $db);
 
 // if($conn){
 //     echo "koneksi berhasil";
@@ -11,4 +11,3 @@ $conn=mysqli_connect($host,$user,$pass,$db);
 //     echo"koneksi gagal";
 // }
 mysqli_select_db($conn, $db);
-?>
